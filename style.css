@@ -1,0 +1,704 @@
+
+*{
+    padding: 0;
+    margin:  0;
+    font-family: sans-serif;
+     box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+.main {
+    background-image:url(images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+}
+.main::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.container{
+    padding: 0 20px;   
+}
+.navbar{
+   
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        flex-wrap: wrap;
+}
+.navbar .logo a{
+        font-size: 30px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        text-transform: uppercase;   
+        position: absolute;
+        top: 22%;
+        left: 0%;
+}
+ul{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        position: relative;
+        left: 33%;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px; 
+}
+.toogle i{
+    font-size: 30px;
+   
+    display: none;
+}
+.text {
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 270px;
+}
+.text h1{
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+}
+.text p{
+        font-size: 30px;
+}
+.icons-social{
+       position: absolute;
+       left: 50%;
+       top: 75%;
+       transform: translateX(-50%);     
+}
+.icons-social i{
+    background-color: black;
+    padding: 5px;
+    border-radius: 20%;
+    opacity: 1;
+    color: white;
+}
+@media (max-width: 767px) {
+    
+   ul li a{
+        display: none;
+    }
+    .toogle i{
+        display: block;
+        color: white!important;
+        opacity:0.9;
+        position: relative;
+        left: 512%;
+    }
+    .container .logo a{
+        left: 60px;
+    }
+    
+    .text {
+        top: 200px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .text h1 {
+        font-size: 30px;
+    }
+
+    .text p {
+        font-size: 18px;
+    }
+
+    .icons-social {
+        left: 50%;
+        transform: translateX(-50%);
+        
+        display: flex;
+        gap: 10px;
+    }
+
+    .icons-social i {
+        font-size: 20px;
+        padding: 8px;
+        opacity: 1;
+    }
+}
+/*
+/* start aboutme*/
+.aboutme{
+    background-color: white;
+    padding: 100px 0;
+}
+.aboutme .container{
+    padding: 0 50px;
+    position: relative;
+}
+.aboutme .image img{
+   width: 35%;
+}
+.aboutme .content {
+    position: absolute;
+    top: -15%;
+    left: 45%;
+    padding-right: 100px;
+}
+.aboutme .content h1{
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+.aboutme .content span{
+    display: block;
+    color: #999;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.aboutme .content p{
+   color: #999;
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+.aboutme .brog-hold{
+  margin-bottom: 30px;
+}
+.aboutme .brog-hold h4{
+    font-size: 15px;
+    font-weight: 400;
+}
+.aboutme .brog-hold .brog{
+    background: #f7f7f7;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+    position: relative;
+}
+.aboutme .brog-hold .brog span{
+    display: block;
+    height: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+.aboutme .brog-hold .brog  span::before{
+    content: attr(data-progres);
+    color: white;
+    position: absolute;
+    text-align: center;
+    padding: 2px;
+    left: 40px;
+}
+.download{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    font-size: 15px;
+    padding: 10px 25px;
+
+}
+
+.download:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.cm {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    margin-bottom: 30px;
+    font-size: 15px;
+    padding: 10px 30px;
+}
+.cm:hover{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+@media (max-width: 768px) {
+  .aboutme{
+            padding: 50px 0;
+  }
+  .aboutme .container{
+            padding: 0 20px ;
+  }
+  .aboutme .image img{
+        width: 100%;
+        display: block;
+        margin: 0 auto 20px auto;
+  }
+  .aboutme .content{
+        position: static;
+        padding: 0;
+        width: 100%;
+  }
+  .aboutme h1,span,p{
+    text-align: center;
+  }
+  .aboutme .brog-hold h4{
+    text-align: center;
+  }
+  .aboutme .brog span::before{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .download,.cm{
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+  }
+}
+  /*start servises*/  
+ .services {
+    padding: 100px 0;  
+  }
+  .services .container{
+    padding:0 20px;
+    position: relative;
+    background: #f7f7f7;
+  }
+   .main-holder {
+    text-align: center;
+    padding-bottom: 50px;
+   
+  }
+   .main-holder h1{
+        font-weight: 900;
+        letter-spacing: -2px;
+        padding-top: 20px;
+  }
+  .cards{
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        gap: 20px;
+        margin-top: 40px;
+  }
+  
+  .card-body i{
+        color: #000;
+        background-color: #f7f7f7;
+        font-size: 30px;
+        position: relative;
+        left: 130px;
+        margin-bottom: 32px;
+        padding: 10px;
+        border-radius: 50%;
+  }
+  .card-body i::before{
+        content:icon;
+ 
+  }
+.cards :hover{
+    i{
+    background-color: black;
+    color: #f7f7f7; 
+    transition: 0.7s;
+    }
+    }
+  .card-body h5{
+    text-align: center;
+    font-weight: 700;
+  }
+  .card-body p {
+    text-align: center;
+    color: #999;
+  }
+
+  @media(max-width:767px){
+   
+     .cards {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .card-body{
+    padding: 0;
+    margin: 0;
+  }
+  .card-body i{
+            position: relative;
+            left: 144px;
+    }
+  }
+  /*Start portfolio*/
+  .portfolio{
+    padding: 100px 0;
+        
+  }
+  .navbar{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 75px;
+    margin-bottom: 35px;
+  }
+ .navbar-nav{
+    display: flex;
+    flex-direction: row;
+   left: 45%;
+ }
+ .nav-item .active{
+        border-bottom: 3px solid black;
+        padding-bottom: 0px;
+}
+.portfolio .container{
+    padding: 0 20px;
+    position: relative;
+}
+.col-lg-4{
+    margin-bottom: 30px;
+}
+@media(max-width:767px){
+    .navbar-nav{
+                left: 30%;
+    }
+}
+/*Start testi*/
+    .testi{
+        padding: 100px 0;
+        background-color: #f7f7f7;
+        margin-bottom: 50px;
+    }
+    .testi .container{
+        padding: 0 20px;
+        position: relative;
+    }
+     .testi .clint{
+        width: 100%;
+        height: 188px;
+       
+     }
+
+    .testi .clint img{
+        width: 10%;
+        position: absolute;
+        top: 0;
+        left:47%;
+        transform: translateX(-26%);
+        border-radius: 50%;
+    } 
+    .testi .clint p{
+        text-align: center;
+        position: absolute;
+        top: 138px;
+        color: #999;
+        font-size: 19px;
+        padding: 0 100px;
+    }
+    .testi .clint h3{
+        text-align: center;
+        position: relative;
+        top: 210px;
+        font-size: 20px;
+        color: #000;
+        font-weight: 300;
+    }
+    .testi .clint h5{
+        text-align: center;
+        position: relative;
+        top: 215px;
+        font-size: 20px;
+        color: #999;
+    }
+    .bullets {
+            position: absolute;
+            left: 47%;
+            top: 55%;
+            transform: translateX(-50%);
+                       
+    }
+    .bullets li{
+        width: 13px;
+        height: 13px;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin-right: -15px ;
+    }
+    .bullets .active {
+    background-color: #999;
+    border-color: #999;
+    }
+    .numbers{
+       margin-top: 145px;
+    padding: 50px 0;
+    }
+    .item{
+        text-align: center;
+    }
+    .item i {
+    font-size: 35px;
+    padding-bottom: 20px;
+    }
+    .item h3{
+    font-weight: 900;
+    letter-spacing: -1px;
+    }
+    .item p{
+    font-size: 19px;
+    font-weight: 400;
+    color: #999;
+    }
+    @media (max-width: 768px) {
+    .testi {
+        padding: 60px 0;
+    }
+
+    .testi .clint img {
+        width: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .testi .clint p {
+        font-size: 16px;
+        padding: 0 20px;
+        top: 130px;
+    }
+
+    .testi .clint h3 {
+       top: 240px;
+        font-size: 18px;
+    }
+
+    .testi .clint h5 {
+        top: 235px;
+        font-size: 16px;
+    }
+
+    .bullets {
+        left: 43%;
+        top: 320px;
+    }
+    
+
+    .item i {
+        font-size: 28px;
+    }
+
+    .item h3 {
+        font-size: 20px;
+    }
+
+    .item p {
+        font-size: 16px;
+    }
+}
+/*Start ourteam. */
+.our-team{
+    padding-bottom: 100px;
+    background-color: #f7f7f7;
+}
+
+.our-team .card .card-body-1{
+    background-color: rgba(52, 52, 52, 0.8);
+}
+.our-team .card .card-body-1 h3{
+color: white;
+padding: 5px;
+font-weight: 500;
+text-align: center;
+}
+.our-team .card .card-body-1 p{
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+}
+.our-team .card .icon-1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+}
+.our-team .card .icon-1 i{
+    font-size: 30px;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.our-team .card:hover{
+    .icon-1 i{
+        background-color: #000 ; 
+        color: white; 
+    }
+}
+@media(max-width:767px){
+.our-team .card{
+        position: relative;
+        right: 10px;
+}
+}
+/* Start contact */
+.contact-us{
+    padding: 100px 0;
+}
+.contact-us .row-contact{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.contact-us .row-contact .icon i{
+    background-color: #f7f7f7;
+    padding: 15px;
+    color: black;
+    border-radius: 50%;
+}
+.contact-us .row-contact .col-md-3:hover{
+    .icon i{
+        background-color: black;
+        color: white;
+    }
+}
+.contact-us .row-2 form{
+        display: flex;
+        gap: 100px;
+}
+.contact-us .row-2 .form input{
+        
+    padding-left: 240px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    border: 0;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+}
+textarea{
+    height: 223px;
+    width: 1086px;
+    border: 0;
+    background-color: #f4f4f4;
+}
+button{
+    padding: 10px 40px;
+    border: 0;
+    background: #1c1c1c;
+    color: white;
+    border-radius: 9px;
+}
+@media(max-width:767px){
+    .contact-us .row-contact{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-us .row-contact .icon i{
+        padding: 10px;
+        font-size: 20px;
+    }
+    .contact-us .row-2 form{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-us .row-2 form input{
+        width: 100%;
+        padding-left: 20px;
+    }
+    textarea{
+        width: 100%;
+    }
+}
+
+.footer{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.footer p{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 0;
+}
+/*@media (min-width: 768px) and (max-width: 1024px) {
+
+    .navbar .logo a {
+        font-size: 24px;
+        left: 20px;
+        top: 25%;
+    }
+
+ 
+    ul {
+        gap: 20px;
+        left: 25%;
+    }
+
+ 
+    .text {
+        top: 220px;
+        padding: 0 20px;
+    }
+
+    .text h1 {
+        font-size: 40px;
+    }
+
+    .text p {
+        font-size: 22px;
+    }
+
+    .icons-social {
+        top: 80%;
+        gap: 15px;
+    }
+
+ 
+    .aboutme .image img {
+        width: 50%;
+    }
+
+    .aboutme .content {
+        top: -20%;
+        left: 65%;
+        padding-right: 25px;
+        transform: translateX(-50%);
+    }
+
+ 
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .card-body i {
+       
+        margin: 0 auto 20px auto;
+    }
+
+
+    .our-team .card {
+        margin: 0 auto;
+    }
+
+ 
+    .contact-us .row-2 form {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .contact-us .row-2 .form input {
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    textarea {
+        width: 100%;
+    }
+}
